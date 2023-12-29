@@ -1,0 +1,35 @@
+{
+  "name": "cplus_automation",
+  "version": "1.0.0",
+  "description": "Canada Plus Upgrade Cypress Automation",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S /Q cypress\\e2e-reports && mkdir cypress\\e2e-reports && mkdir cypress\\e2e-reports\\combined-json-report",
+    "pretest": "npm run clean:reports",
+    "open": "npx cypress-ntlm run --headed && npm run posttest",
+    "test": "npx cypress-ntlm run --spec ./cypress/e2e/office/availibility/office-availability-search-tests.cy.js --headed",
+    "basetest": "npm run pretest && npx cypress-ntlm run --spec ./cypress/e2e/base-test.cy.js --headed",
+    "posttest": "npm run cy:mochamerge && npm run cy:marge && npm run sendanemail",
+    "baseTest": "npx cypress-ntlm run --spec ./cypress/e2e/base-test.cy.js",
+    "office-avail": "npm run pretest && npx cypress-ntlm run --headed --spec ./cypress/e2e/office/availability/OFFICE_AVAILABILITY_TEST_SUIT/*cy.js",
+    "office-prop":"npm run pretest && npx cypress-ntlm run --headed --spec ./cypress/e2e/office/property/OFFICE_PROPERTY_TEST_SUIT/*cy.js",
+    "cy:mochamerge": "npx mochawesome-merge cypress/e2e-reports/json-report/*.json > cypress/e2e-reports/combined-json-report/report.json",
+    "cy:marge": "npx marge cypress/e2e-reports/combined-json-report/report.json -f report -o cypress/e2e-reports",
+    "sendanemail": "node C:/CPLUS_AUTOMATION/cypress/support/sendEmail.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://imriel-canadaplus@dev.azure.com/imriel-canadaplus/PLUS/_git/CPLUS_AUTOMATION"
+  },
+  "author": "Hardik Prajapati",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.6.0",
+    "cypress-failed-log": "^2.10.0",
+    "mochawesome": "^7.1.3",
+    "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "cypress-ntlm-auth": "^4.1.1"
+  }
+}

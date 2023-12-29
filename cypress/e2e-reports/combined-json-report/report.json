@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-14T14:53:24.553Z",
+    "end": "2023-02-14T14:54:05.357Z",
+    "duration": 36793,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5d84c82-6256-4b23-a177-c8ad84e56c51",
+      "title": "",
+      "fullFile": "cypress\\e2e\\office\\availibility\\office-availability-search-tests.cy.js",
+      "file": "cypress\\e2e\\office\\availibility\\office-availability-search-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+          "title": "OfficeAvailabilitySearch",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Select_Office_Availability",
+              "fullTitle": "OfficeAvailabilitySearch Select_Office_Availability",
+              "timedOut": null,
+              "duration": 5258,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Productline Dropdown\ncy.get(\"span[class='mat-select-value-text ng-tns-c19-7 ng-star-inserted']\").click({\n  force: true\n});\n//Click on Office Productline\ncy.get('.mat-option-text').contains(\" OFFICE \").click();\n//click on Availability \ncy.get('.mat-nav-list > [protractor-name=\"menu_0\"] > .mat-list-item > .mat-list-item-content').click();",
+              "err": {},
+              "uuid": "bc45fe5f-9307-4add-b5cf-661c0da41192",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_Clearallfilters_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_Clearallfilters_Search",
+              "timedOut": null,
+              "duration": 2080,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click On 3 Dots At top right\ncy.get(\"button[class='mobile-search-option mat-menu-trigger mat-icon-button mat-button-base']\").click();\n//Click on Clear All\ncy.get(\".mat-menu-content > :nth-child(1)\").click();\n//Click On 3 Dots At top right\ncy.get(\".mat-button-wrapper\").contains(\"more_vert\").click({\n  force: true\n});\n//Click on Set As Default\ncy.get(\".mat-menu-content > :nth-child(2)\").click();",
+              "err": {},
+              "uuid": "13f4dce6-083a-4172-a128-f0c8e858136c",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_LeaseSublet_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_LeaseSublet_Search",
+              "timedOut": null,
+              "duration": 5086,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Lease\ncy.get(\"#mat-checkbox-3-input\").click({\n  force: true\n});\n//Click On Sublet\ncy.get(\"#mat-checkbox-6-input\").click({\n  force: true\n});\n//Click On search Button\ncy.get(\".mat-raised-button\").click({\n  force: true\n});\n//Assert LeaseSublet\ncy.get(\"#k-grid0-r1c7\").should(\"have.text\", \"Lease,  Sublet\");",
+              "err": {},
+              "uuid": "782de9a2-9e68-4bbd-9158-7bec951f2f77",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_LeaseDirect_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_LeaseDirect_Search",
+              "timedOut": null,
+              "duration": 5811,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Lease\ncy.get(\"#mat-checkbox-3-input\").click({\n  force: true\n});\n//Click On Direct\ncy.get(\"#mat-checkbox-5-input\").click({\n  force: true\n});\n//Click On search Button\ncy.get(\".mat-raised-button\").click({\n  force: true\n});\n//Assert LeaseDirect\ncy.get(\"#k-grid0-r1c7\").should(\"have.text\", \"Lease,  Direct\");",
+              "err": {},
+              "uuid": "b6c5f62d-4c70-4e79-9f48-140eb1c4b4af",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_Sale_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_Sale_Search",
+              "timedOut": null,
+              "duration": 4997,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Sale\ncy.get(\"#mat-checkbox-4-input\").click({\n  force: true\n});\n//Click On search Button\ncy.get(\".mat-raised-button\").click({\n  force: true\n});\n//Assert Sale\ncy.get(\"#k-grid0-r1c7\").should(\"have.text\", \"Sale\");",
+              "err": {},
+              "uuid": "cb58429a-742e-40da-b133-8dc46b6c5ab8",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_City_Toronto_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_City_Toronto_Search",
+              "timedOut": null,
+              "duration": 10569,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//type city name\ncy.get(\"#mat-chip-list-input-2\").type(\"Toronto\");\n//click on Search\ncy.get(\".mat-raised-button\").click();\n//click on City header\ncy.get('#k-grid0-r0c17 > .k-cell-inner > .k-link > .overflow-cell > .ngx-ellipsis-inner').click();\n//Assert CityToronto\ncy.get(\"#k-grid0-r5c17\").should(\"have.text\", \"Toronto\");",
+              "err": {},
+              "uuid": "5ca22b73-2c12-42c3-9145-5bdbff3fa0d4",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Office_Availability_Address_Search",
+              "fullTitle": "OfficeAvailabilitySearch Office_Availability_Address_Search",
+              "timedOut": null,
+              "duration": 2992,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//type Address name\ncy.get(\"input[protractor-name='address']\").type(\"1 Hobin Street\");\n//click on Search\ncy.get(\".mat-raised-button\").click();\n//Assert Address name\ncy.get('#k-grid0-r1c2 > .ref-no-link').should(\"include.text\", \"1 Hobin Street\");",
+              "err": {},
+              "uuid": "0537c7f0-bba7-4f35-babf-f03ff5f6d4eb",
+              "parentUUID": "0b485f55-bf63-45c3-b8c0-ee0cea7cc0e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc45fe5f-9307-4add-b5cf-661c0da41192",
+            "13f4dce6-083a-4172-a128-f0c8e858136c",
+            "782de9a2-9e68-4bbd-9158-7bec951f2f77",
+            "b6c5f62d-4c70-4e79-9f48-140eb1c4b4af",
+            "cb58429a-742e-40da-b133-8dc46b6c5ab8",
+            "5ca22b73-2c12-42c3-9145-5bdbff3fa0d4",
+            "0537c7f0-bba7-4f35-babf-f03ff5f6d4eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/e2e-reports/json-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
